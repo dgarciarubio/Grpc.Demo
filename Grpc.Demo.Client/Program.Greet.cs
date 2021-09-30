@@ -15,7 +15,7 @@
 
                 Console.Write("Tell me your name: ");
                 string name = Console.ReadLine();
-
+                
                 var response = await client.GreetAsync(new GreetRequest
                 {
                     Name = name,

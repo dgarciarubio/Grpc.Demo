@@ -17,7 +17,7 @@
                 {
                     while (true)
                     {
-                        Console.Write("Write the next number: ");
+                        Console.Write("Write the next number to calculate average (non-number to finish): ");
                         string input = Console.ReadLine();
                         if (!int.TryParse(input, out int number))
                         {

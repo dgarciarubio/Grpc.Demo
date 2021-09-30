@@ -16,13 +16,13 @@
             {
                 var client = new TimerService.TimerServiceClient(channel);
 
-                Console.Write("Specify delay in seconds: ");
+                Console.Write("Specify delay in seconds between responses: ");
                 var delay = TimeSpan.FromSeconds(int.Parse(Console.ReadLine()));
-                Console.Write("Specify timeout in seconds: ");
+                Console.Write("Specify timeout in seconds to stop receiving messages: ");
                 var timeout = TimeSpan.FromSeconds(int.Parse(Console.ReadLine()));
                 var cts = new CancellationTokenSource(timeout);
 
-                using (var streamingCall = client.StreamTime(new StreamTimeRequest { Delay = Duration.FromTimeSpan(delay), }, cancellationToken: cts.Token))
+                using (var streamingCall = client.StreamTime(new StreamTimeRequest { Delay = Duration.FromTimeSpan(delay) }, cancellationToken: cts.Token))
                 {
                     try
                     {

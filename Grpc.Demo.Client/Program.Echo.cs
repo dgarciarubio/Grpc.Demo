@@ -8,7 +8,7 @@
 
     static partial class Program
     {
-        static async Task KeepGreeting()
+        static async Task Echo()
         {
             using (var channel = GrpcChannel.ForAddress("https://localhost:5001"))
             {
@@ -24,7 +24,7 @@
                         }
                     });
 
-                    Console.WriteLine("Type any messages and press enter to receive an echo.");
+                    Console.WriteLine("Type any messages and press enter to receive an echo. Press enter without any message to exit.");
                     while (true)
                     {
                         string message = Console.ReadLine();
