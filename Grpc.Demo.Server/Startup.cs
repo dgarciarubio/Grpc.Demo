@@ -37,7 +37,7 @@ namespace Grpc.Demo.Server
             {
                 endpoints.MapGrpcService<Services.GreeterService>();
                 endpoints.MapGrpcService<Services.TimerService>();
-                endpoints.MapGrpcService<Services.AccumulatorService>();
+                endpoints.MapGrpcService<Services.AverageService>();
                 endpoints.MapGrpcService<Services.EchoService>();
             });
         }
