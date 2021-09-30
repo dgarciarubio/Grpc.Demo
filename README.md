@@ -9,7 +9,7 @@ Demostration of the usage of the gGRPC tooling in C#.
 ## Services:
 - GreeterServcice: demonstration of a non-streaming gRPC.
 - TimerService: demonstration of a server streaming gRPC.
-- AverageService: demonstration of client streaminng gRPC.
+- AverageService: demonstration of client streaming gRPC.
 - EchoService: demonstration of a bi-directional streaming gRPC.
 
 ## How to run:
