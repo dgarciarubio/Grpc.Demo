@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Grpc.Demo.Definition.Timer";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+
+service TimerService {
+	rpc StreamTime(StreamTimeRequest) returns (stream StreamTimeResponse);
+}
+
+message StreamTimeRequest {
+	google.protobuf.Duration delay = 1;
+}
+
+message StreamTimeResponse{
+	google.protobuf.Timestamp time = 1;
+}

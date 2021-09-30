@@ -1,0 +1,15 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Grpc.Demo.Definition.Echo";
+
+service EchoService {
+	rpc Echo(stream EchoRequest) returns (stream EchoResponse);
+}
+
+message EchoRequest {
+	string message = 1;
+}
+
+message EchoResponse {
+	string message = 1;
+}

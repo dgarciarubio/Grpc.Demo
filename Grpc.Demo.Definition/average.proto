@@ -1,0 +1,15 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Grpc.Demo.Definition.Average";
+
+service AverageService {
+	rpc CalculateAverage(stream CalculateAverageRequest) returns (CalculateAverageResponse);
+}
+
+message CalculateAverageRequest {
+	double number = 1;
+}
+
+message CalculateAverageResponse {
+	double average = 1;
+}

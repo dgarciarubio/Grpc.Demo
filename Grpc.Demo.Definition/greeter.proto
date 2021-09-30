@@ -1,0 +1,15 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Grpc.Demo.Definition.Greeter";
+
+service GreeterService {
+	rpc Greet(GreetRequest) returns (GreetResponse);
+}
+
+message GreetRequest {
+	string name = 1;
+}
+
+message GreetResponse {
+	string greeting = 1;
+}
